@@ -73,7 +73,7 @@
 &mt HASH Q    &mt N1 W   &mt N2 E              &mt N3 R        &mt LPAR T            &mt RPAR Y           &mt UNDERSCORE U  &mt MINUS I           &mt PLUS O           &mt AT P
 &mt STAR A    &mt N4 S   &mt N5 D              &mt N6 F        &mt SLASH G           &mt COLON H          &mt SEMI J        &mt SINGLE_QUOTE K    &mt DOUBLE_QUOTES L  &kp BSPC
 &sk LEFT_ALT  &mt N7 Z   &mt N8 X              &mt N9 C        &mt QMARK V           &mt EXCLAMATION B    &mt COMMA N       &mt DOT M             &mt LA(U) LA(E)      &kp ENTER
-                         &td_lshift_hold_caps                  &kp LCTRL             &kp SPACE            &to 1             &td_rshift_hold_caps
+                         &td_lshift_hold_caps                  &sk LCTRL             &kp SPACE            &to 1             &td_rshift_hold_caps
             >;
         };
 
@@ -92,10 +92,10 @@
             bindings = <
 &msc SCRL_UP   &msc SCRL_DOWN
 &bt BT_SEL 0   &bt BT_SEL 1    &td_lclck_bt_clr      &bt BT_SEL 2  &bt BT_SEL 3
-&kp PAGE_UP    &kp UP          &kp PAGE_DOWN         &none         &kp LT             &kp GT               &kp PIPE    &none                 &none        &ext_power EP_TOG
-&kp LEFT       &kp DOWN        &kp RIGHT             &none         &none              &none                &none       &kp GRAVE             &none        &kp BSPC
-&sk RIGHT_ALT  &none           &sys_reset            &none         &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &none                 &bootloader  &kp ENTER
-                               &td_lshift_hold_caps                &kp RIGHT_CONTROL  &hm OUT_TOG SPACE    &to 0       &td_rshift_hold_caps
+&kp PAGE_UP    &kp UP          &kp PAGE_DOWN         &none         &kp LT        &kp GT               &kp PIPE    &none                 &none        &ext_power EP_TOG
+&kp LEFT       &kp DOWN        &kp RIGHT             &none         &none         &none                &none       &kp GRAVE             &none        &kp BSPC
+&sk RIGHT_ALT  &none           &sys_reset            &none         &bl BL_DEC    &bl BL_TOG           &bl BL_INC  &none                 &bootloader  &kp ENTER
+                               &td_lshift_hold_caps                &sk RCTRL     &hm OUT_TOG SPACE    &to 0       &td_rshift_hold_caps
             >;
         };
     };
