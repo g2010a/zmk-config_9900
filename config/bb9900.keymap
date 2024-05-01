@@ -59,7 +59,7 @@
         };
     };
 
-/*                KEY POSITIONS
+    /*                KEY POSITIONS
     ╭───╮                              ╭───╮
     |sk1|                              |sk2|
   ╭──────────────────────────────────────────╮
@@ -70,39 +70,40 @@
   ╰────╮ aA  0   ----space----  sym  aA ╭────╯
        ╰────────────────────────────────╯
 */
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mkp LCLK     &mkp RCLK
-&kp TAB       &kp LGUI   &mkp LCLK             &mt ESC K_BACK  &mt C_AC_SEARCH HOME
-&mt HASH Q    &mt N1 W   &mt N2 E              &mt N3 R        &mt LPAR T            &mt RPAR Y           &mt UNDERSCORE U  &mt MINUS I           &mt PLUS O           &mt AT P
-&mt STAR A    &mt N4 S   &mt N5 D              &mt N6 F        &mt SLASH G           &mt COLON H          &mt SEMI J        &mt SINGLE_QUOTE K    &mt DOUBLE_QUOTES L  &kp BSPC
-&sk LEFT_ALT  &mt N7 Z   &mt N8 X              &mt N9 C        &mt QMARK V           &mt EXCLAMATION B    &mt COMMA N       &mt DOT M             &mt LA(U) LA(E)      &kp ENTER
-                         &td_lshift_hold_caps                  &sk LCTRL             &kp SPACE            &to 1             &td_rshift_hold_caps
+&mkp LCLK      &mkp RCLK
+&kp TAB        &kp LGUI   &mkp LCLK       &mt ESC K_BACK  &mt C_AC_SEARCH C_AC_HOME
+&mt HASH Q     &mt N1 W   &mt N2 E        &mt N3 R        &mt LPAR T                 &mt RPAR Y           &mt UNDERSCORE U  &mt MINUS I         &mt PLUS O           &mt AT P
+&mt STAR A     &mt N4 S   &mt N5 D        &mt N6 F        &mt SLASH G                &mt COLON H          &mt SEMI J        &mt SINGLE_QUOTE K  &mt DOUBLE_QUOTES L  &kp BSPC
+&sk RIGHT_ALT  &mt N7 Z   &mt N8 X        &mt N9 C        &mt QMARK V                &mt EXCLAMATION B    &mt COMMA N       &mt DOT M           &mt RA(U) RA(E)      &kp ENTER
+                          &mt CAPS LSHFT                  &mt N0 LCTRL               &kp SPACE            &to 1             &mt CAPS RSHIFT
             >;
         };
 
         sym_layer {
             bindings = <
 &kp C_VOL_UP           &kp C_VOL_DN
-&kp PSCRN              &kp C_AC_SEARCH  &mkp LCLK             &kp F5  &kp F12
-&kp HASH               &kp N1           &kp N2                &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS             &kp PLUS           &kp AT
-&kp STAR               &kp N4           &kp N5                &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS              &kp DQT            &kp DEL
-&td_sticky_ralt_rctrl  &kp N7           &kp N8                &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT               &mt C_MUTE DOLLAR  &kp ENTER
-                                        &td_lshift_hold_caps          &kp N0         &kp SPACE        &to 2      &td_rshift_hold_caps
+&kp PSCRN              &kp C_AC_HOME  &mkp LCLK        &kp F5  &kp F12
+&kp HASH               &kp N1         &kp N2           &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS        &kp PLUS           &kp AT
+&kp STAR               &kp N4         &kp N5           &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS         &kp DQT            &kp DEL
+&td_sticky_ralt_rctrl  &kp N7         &kp N8           &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT          &mt C_MUTE DOLLAR  &kp ENTER
+                                      &mt CAPS LSHIFT          &kp N0         &kp SPACE        &to 2      &mt CAPS RSHIFT
             >;
         };
 
         upper_layer {
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1    &td_lclck_bt_clr      &bt BT_SEL 2  &bt BT_SEL 3
-&kp PAGE_UP   &kp UP          &kp PAGE_DOWN         &none         &kp LT        &kp GT               &kp PIPE    &none                 &none        &ext_power EP_TOG
-&kp LEFT      &kp DOWN        &kp RIGHT             &none         &none         &none                &none       &kp GRAVE             &none        &kp BSPC
-&sk RALT      &none           &sys_reset            &none         &bl BL_DEC    &bl BL_TOG           &bl BL_INC  &none                 &bootloader  &kp ENTER
-                              &td_lshift_hold_caps                &sk RCTRL     &hm OUT_TOG SPACE    &to 0       &td_rshift_hold_caps
+&bt BT_SEL 0  &bt BT_SEL 1    &td_lclck_bt_clr  &bt BT_SEL 2  &bt BT_SEL 3
+&kp PAGE_UP   &kp UP          &kp PAGE_DOWN     &none         &kp LT        &kp GT               &kp PIPE    &none            &none        &ext_power EP_TOG
+&kp LEFT      &kp DOWN        &kp RIGHT         &none         &none         &none                &none       &kp GRAVE        &none        &kp BSPC
+&sk RALT      &none           &sys_reset        &none         &bl BL_DEC    &bl BL_TOG           &bl BL_INC  &none            &bootloader  &kp ENTER
+                              &mt CAPS LSHIFT                 &sk RCTRL     &hm OUT_TOG SPACE    &to 0       &mt CAPS RSHIFT
             >;
         };
     };
