@@ -17,6 +17,13 @@
 
 / {
     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            bindings = <&out &kp>;
+        };
+
         td_lclck_bt_clr: td_lclck_bt_clr {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -24,15 +31,6 @@
             bindings = <&mkp LCLK>, <&bt BT_CLR>;
 
             label = "TD_LCLCK_BT_CLR";
-        };
-    };
-
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <500>;
-            bindings = <&out &kp>;
         };
 
         td_lshift_hold_caps: td_lshift_hold_caps {
@@ -61,15 +59,17 @@
         };
     };
 
-    //         --------------------------------------------------------------------------------------------------------------------------         
-    //         |    Shoulder Key1    |                                                                             |    Shoulder Key2    |     
-    // |         Call key      |      Blackberry Key        |    Trackpad    |             Back Key                |             Endcall Key          |
-    // |     Q      |     W    |     E    |     R    |      T      |       Y        |       U        |        I        |       O      |      P        |     
-    // |     A      |     S    |     D    |     F    |      G      |       H        |       J        |        K        |       L      |      ←        |  
-    // |     alt    |     Z    |     X    |     C    |      V      |       B        |       N        |        M        |       $      |    Enter      |   
-    //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
-    //        -----------------------------------------------------------------------------------------------------------------
-
+/*                KEY POSITIONS
+    ╭───╮                              ╭───╮
+    |sk1|                              |sk2|
+  ╭──────────────────────────────────────────╮
+  | s/call   bberry   trackpd   back  e/call |
+  |  Q   W   E   R   T   Y   U   I   O   P   |
+  |  A   S   D   F   G   H   J   K   L   ←   |
+  | alt  Z   X   C   V   B   N   M   $  entr |
+  ╰────╮ aA  0   ----space----  sym  aA ╭────╯
+       ╰────────────────────────────────╯
+*/
     keymap {
         compatible = "zmk,keymap";
 
