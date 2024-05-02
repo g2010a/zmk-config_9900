@@ -15,9 +15,14 @@
 #define SYM 1
 #define UPPER 2
 
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
+
 / {
     behaviors {
-        hm: homerow_mods {
+        hm_long_hold: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <500>;
@@ -31,24 +36,6 @@
             bindings = <&mkp LCLK>, <&bt BT_CLR>;
 
             label = "TD_LCLCK_BT_CLR";
-        };
-
-        td_lshift_hold_caps: td_lshift_hold_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LSHIFT_HOLD_CAPS";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <400>;
-        };
-
-        td_rshift_hold_caps: td_rshift_hold_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_RSHIFT_HOLD_CAPS";
-            #binding-cells = <0>;
-            bindings = <&sk RSHIFT>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <400>;
         };
 
         td_sticky_ralt_rctrl: td_sticky_ralt_rctrl {
@@ -65,6 +52,7 @@
             bindings = <&kp>, <&sk>;
 
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -109,10 +97,10 @@
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
 &bt BT_SEL 0  &bt BT_SEL 1    &td_lclck_bt_clr                 &bt BT_SEL 2  &bt BT_SEL 3
-&kp PAGE_UP   &kp UP          &kp PAGE_DOWN                    &none         &kp LT        &kp GT               &kp PIPE    &none                            &none        &ext_power EP_TOG
-&kp LEFT      &kp DOWN        &kp RIGHT                        &none         &none         &none                &none       &kp GRAVE                        &none        &kp BSPC
-&sk RALT      &none           &sys_reset                       &none         &bl BL_DEC    &bl BL_TOG           &bl BL_INC  &none                            &bootloader  &kp ENTER
-                              &sticky_tap_kp_hold CAPS LSHIFT                &sk RCTRL     &hm OUT_TOG SPACE    &to 0       &sticky_tap_kp_hold CAPS RSHIFT
+&kp PAGE_UP   &kp UP          &kp PAGE_DOWN                    &none         &kp LT        &kp GT                         &kp PIPE    &none                            &none        &ext_power EP_TOG
+&kp LEFT      &kp DOWN        &kp RIGHT                        &none         &none         &none                          &none       &kp GRAVE                        &none        &kp BSPC
+&sk RALT      &none           &sys_reset                       &none         &bl BL_DEC    &bl BL_TOG                     &bl BL_INC  &none                            &bootloader  &kp ENTER
+                              &sticky_tap_kp_hold CAPS LSHIFT                &sk RCTRL     &hm_long_hold OUT_TOG SPACE    &to 0       &sticky_tap_kp_hold CAPS RSHIFT
             >;
         };
     };
