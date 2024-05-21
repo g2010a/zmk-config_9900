@@ -87,7 +87,7 @@
 &kp C_VOL_UP           &kp C_VOL_DN
 &kp PSCRN              &kp C_AC_HOME  &mkp LCLK                        &kp F5  &kp F12
 &kp HASH               &kp N1         &kp N2                           &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS                        &kp PLUS                     &kp AT
-&kp STAR               &kp N4         &kp N5                           &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS                         &kp DQT                      &kp DEL
+&kp STAR               &kp N4         &kp N5                           &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS                         &kp DQT                      &mt DELETE BACKSPACE
 &td_sticky_ralt_rctrl  &kp N7         &kp N8                           &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT                          &mt NON_US_BACKSLASH DOLLAR  &kp ENTER
                                       &sticky_tap_kp_hold CAPS LSHIFT          &kp N0         &kp SPACE        &to 2      &sticky_tap_kp_hold CAPS RSHIFT
             >;
@@ -95,12 +95,12 @@
 
         upper_layer {
             bindings = <
-&msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1    &td_lclck_bt_clr                 &bt BT_SEL 2  &bt BT_SEL 3
-&kp PAGE_UP   &kp UP          &kp PAGE_DOWN                    &none         &kp LT         &kp GT                         &kp PIPE    &none                            &none        &ext_power EP_TOG
-&kp LEFT      &kp DOWN        &kp RIGHT                        &none         &kp BACKSLASH  &none                          &none       &kp GRAVE                        &none        &kp BSPC
-&sk RALT      &none           &sys_reset                       &none         &bl BL_DEC     &bl BL_TOG                     &bl BL_INC  &none                            &bootloader  &kp ENTER
-                              &sticky_tap_kp_hold CAPS LSHIFT                &sk RCTRL      &hm_long_hold OUT_TOG SPACE    &to 0       &sticky_tap_kp_hold CAPS RSHIFT
+&kp K_SCROLL_UP  &kp K_SCROLL_DOWN
+&bt BT_SEL 0     &bt BT_SEL 1       &td_lclck_bt_clr                 &bt BT_SEL 2  &bt BT_SEL 3
+&kp PAGE_UP      &kp UP             &kp PAGE_DOWN                    &none         &kp LT         &kp GT                         &kp PIPE    &none                            &none        &ext_power EP_TOG
+&kp LEFT         &kp DOWN           &kp RIGHT                        &none         &kp BACKSLASH  &none                          &none       &kp GRAVE                        &none        &kp BSPC
+&sk RALT         &none              &sys_reset                       &none         &kp EQUAL      &bl BL_DEC                     &bl BL_INC  &none                            &bootloader  &kp ENTER
+                                    &sticky_tap_kp_hold CAPS LSHIFT                &sk RCTRL      &hm_long_hold OUT_TOG SPACE    &to 0       &sticky_tap_kp_hold CAPS RSHIFT
             >;
         };
     };
